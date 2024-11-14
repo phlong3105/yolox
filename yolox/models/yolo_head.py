@@ -636,6 +636,6 @@ class YOLOXHead(nn.Module):
             ], 1)
 
             xyxy_boxes = cxcywh2xyxy(gt_bboxes_per_image)
-            save_name = save_prefix + str(batch_idx) + ".png"
+            save_name = save_prefix + str(batch_idx) + ".jpg"
             img = visualize_assign(img, xyxy_boxes, coords, matched_gt_inds, save_name)
             logger.info(f"save img to {save_name}")
